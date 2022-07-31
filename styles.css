@@ -11,14 +11,14 @@ h1 {
 
 #main-wrapper {
   display: grid;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
-  grid-auto-rows: max-content;
   grid-template:
-    "header header header" 10%
-    "sidebar main main"
-    "footer footer footer";
+    "header header header header"
+    "sidebar main main main" 
+    "footer footer footer footer";
+	grid-template-rows: min-content auto min-content;
 }
 
 header {
@@ -35,8 +35,15 @@ header {
 
 main {
   grid-area: main;
+	display: grid;
+	justify-content: center;
+	align-content: center;
   flex-grow: 1;
   background: palevioletred;
+}
+
+#board {
+	background: red;
 }
 
 footer {
