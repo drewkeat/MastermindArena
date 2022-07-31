@@ -1,6 +1,46 @@
-*, *::after, *::before {
-	margin: 0;
-	box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-h1{color: green}
+h1 {
+  color: green;
+}
+
+#main-wrapper {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  grid-auto-rows: max-content;
+  grid-template:
+    "header header header" 10%
+    "sidebar main main"
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+  justify-content: center;
+  background: palegreen;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  flex-grow: 1;
+  background: paleturquoise;
+}
+
+main {
+  grid-area: main;
+  flex-grow: 1;
+  background: palevioletred;
+}
+
+footer {
+  max-height: fit-content;
+  grid-area: footer;
+  background: peachpuff;
+}

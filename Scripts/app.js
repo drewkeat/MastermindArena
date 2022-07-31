@@ -1,2 +1,1 @@
-
-$("h1").text("hello")
+console.log("JS Working");
