@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+:root{
+	--color-1: palegreen;
+	--color-2: paleturquoise;
+	--color-3: palevioletred;
+	--color-4: peachpuff;
+	--color-5: green;
+}
+
 h1 {
   color: green;
 }
@@ -24,13 +32,13 @@ h1 {
 header {
   grid-area: header;
   justify-content: center;
-  background: palegreen;
+  background: var(--color-1);
 }
 
 #sidebar {
   grid-area: sidebar;
   flex-grow: 1;
-  background: paleturquoise;
+  background: var(--color-2);
 }
 
 main {
@@ -39,15 +47,15 @@ main {
 	justify-content: center;
 	align-content: center;
   flex-grow: 1;
-  background: palevioletred;
+  background: var(--color-3);
 }
 
 #board {
-	background: red;
+	background: var(--color-4);
 }
 
 footer {
   max-height: fit-content;
   grid-area: footer;
-  background: peachpuff;
+  background: var(--color-5);
 }
