@@ -5,9 +5,4 @@ const appState = {
 	]
 }
 
-const selectRandomColor=(ele)=>{
-	let choiceNum = Math.floor(Math.random()*5)
-	ele.css("backgroundColor", appState.colors[choiceNum])
-}
-
-Ele.board.load("./Fragments/board.html #board-inject")
+Ele.board.load("./Fragments/board.html #board")
